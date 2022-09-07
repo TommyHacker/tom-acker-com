@@ -11,13 +11,6 @@ const Navbar = () => {
 		window.open('https://github.com/tommyhacker?tab=repositories', '_blank');
 	};
 
-	const redirectHome = () => {
-		return navigate('/');
-	};
-	const redirectProjects = () => {
-		return navigate('/projects');
-	};
-
 	const menuHandler = (e) => {
 		e.stopPropagation();
 		setMenu(!menu);
@@ -32,19 +25,26 @@ const Navbar = () => {
 		});
 	}, [menu]);
 
+	const navLinks = () => {
+		return (
+			<>
+				<button onClick={handleGithubLink}>Github</button>
+				<button onClick={() => navigate('/projects')}>Projects</button>
+				<button onClick={() => navigate('/cv')}>CV</button>
+			</>
+		);
+	};
+
 	return (
 		<nav>
 			<div className='nav-left'>
-				<div className='logo' onClick={redirectHome}>
+				<div className='logo' onClick={() => navigate('/')}>
 					Tom Hacker
 				</div>
 			</div>
 			<div className='nav-right'>
 				{!burger ? (
-					<>
-						<button onClick={handleGithubLink}>Github</button>
-						<button onClick={redirectProjects}>Projects</button>
-					</>
+					navLinks()
 				) : (
 					<>
 						<div className='burger' onClick={menuHandler}>
@@ -54,12 +54,7 @@ const Navbar = () => {
 						</div>
 					</>
 				)}
-				{menu && (
-					<div className='nav-menu'>
-						<button onClick={handleGithubLink}>Github</button>
-						<button onClick={redirectProjects}>Projects</button>
-					</div>
-				)}
+				{menu && <div className='nav-menu'>{navLinks()}</div>}
 			</div>
 		</nav>
 	);

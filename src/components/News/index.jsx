@@ -12,13 +12,13 @@ const News = () => {
 			temp.push(article);
 			setArticles(temp);
 		});
-	}, [articles]);
+	}, []);
 
 	return (
 		<div className='news-feed'>
 			{articles &&
 				articles.map((article, index) => {
-					return <Article article={article} />;
+					return <Article article={article} key={index} />;
 				})}
 		</div>
 	);
