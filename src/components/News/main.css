@@ -1,0 +1,12 @@
+.news-feed {
+	height: calc(100vh - 3rem);
+	width: 500px;
+	border: solid black 1px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

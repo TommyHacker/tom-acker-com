@@ -1,0 +1,13 @@
+article {
+	border: solid black 1px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: column;
+	margin: 10px auto;
+}
+
+article .article-title,
+article .article-body {
+	margin: 10px;
+}

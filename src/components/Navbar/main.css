@@ -1,0 +1,29 @@
+nav {
+	width: 100vw;
+	height: 3rem;
+	background: black;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 3rem;
+}
+
+.nav-left {
+	width: 20%;
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-right {
+	width: 10%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
