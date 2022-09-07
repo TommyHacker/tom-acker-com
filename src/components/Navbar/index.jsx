@@ -18,9 +18,19 @@ const Navbar = () => {
 		return navigate('/projects');
 	};
 
-	const menuHandler = () => {
+	const menuHandler = (e) => {
+		e.stopPropagation();
 		setMenu(!menu);
 	};
+
+	useEffect(() => {
+		window.addEventListener('click', (e) => {
+			e.stopPropagation();
+			if (menu) {
+				setMenu(false);
+			}
+		});
+	}, [menu]);
 
 	return (
 		<nav>

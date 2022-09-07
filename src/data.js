@@ -7,4 +7,8 @@ exports.data = [
 		title: 'this is the second',
 		body: 'this is the second article cause i want to see about the spacing in this little box here.',
 	},
+	{
+		title: 'its day 2',
+		body: "im restyling this little thing with mobile first in mind. It's always so much easier this way, style it on the little screen first. Then, add the media queries and state logic to accomodate the bigger screen. wicked cool.",
+	},
 ];
