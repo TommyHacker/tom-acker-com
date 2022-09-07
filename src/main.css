@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.app-container {
+	overflow-x: hidden;
+	width: 100vw;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
